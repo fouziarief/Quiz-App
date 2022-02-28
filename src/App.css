@@ -1,0 +1,590 @@
+.app {
+  width: 100%;
+}
+.user {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black),
+    url(./component/image/messg-backgroung.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 3em;
+  color: white;
+  position: absolute;
+  top: 20%;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.name {
+  width: 20%;
+  position: absolute;
+  top: 40%;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  color: black;
+  font-size: 1.4em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+::placeholder {
+  opacity: 0.5;
+  font-size: 15px;
+}
+.play {
+  width: 15%;
+  height: 35px;
+  background: linear-gradient(
+    125deg,
+    rgb(22, 58, 22),
+    rgb(61, 236, 61),
+    rgb(144, 245, 144)
+  );
+  border: none;
+  border-radius: 5px;
+  color: blue;
+  font-size: 1.2em;
+}
+.replay {
+  width: 15%;
+  height: 35px;
+  background: linear-gradient(
+    125deg,
+    rgb(22, 58, 22),
+    rgb(61, 236, 61),
+    rgb(144, 245, 144)
+  );
+  border: none;
+  border-radius: 5px;
+  color: blue;
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 35%;
+  left: 40%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  grid-column: span 2;
+  position: relative;
+  height: 50vh;
+  background: url(./component/image/milli.jpeg);
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: center;
+  background-color: #000142;
+}
+.timer {
+  border: 3px solid white;
+  border-radius: 50%;
+
+  font-size: 1.2em;
+  color: white;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 45%;
+  top: 78%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.question {
+  grid-column: span 2;
+  height: 50vh;
+  background-color: rgba(7, 5, 58);
+  position: relative;
+  width: 100%;
+}
+.qHeader {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 9px;
+  font-size: 1.6em;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: fantasy;
+  padding: 5px;
+}
+.option {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+
+  bottom: 30%;
+}
+.ans {
+  font-size: 1.2em;
+  margin-left: 20px;
+  width: 40%;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  background-color: rgb(77, 234, 255);
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.ans.active {
+  background-color: blue;
+  border: none;
+}
+.ans.active:hover {
+  background: linear-gradient(
+    125deg,
+    rgb(99, 179, 245),
+    rgb(1, 55, 80),
+    rgb(26, 63, 85)
+  );
+  border: none;
+}
+
+.ans.correct {
+  animation: correct 2s ease forwards;
+}
+@keyframes correct {
+  0%,
+  20%,
+  40% {
+    background-color: mediumblue;
+    color: white;
+  }
+  22%,
+  40%,
+  62% {
+    background-color: #0b0572;
+    color: white;
+  }
+
+  60%,
+  100% {
+    background-color: green;
+  }
+}
+.ans.wrong {
+  animation: wrong 2s ease forwards;
+}
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background-color: mediumblue;
+    color: white;
+  }
+  20%,
+  40%,
+  62% {
+    background-color: #0b0572;
+    color: white;
+  }
+
+  60%,
+  100% {
+    background-color: red;
+  }
+}
+
+.sideMenu {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background-color: #05085a;
+  color: white;
+  font-weight: 800;
+}
+.moneyList {
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10px;
+}
+.list.active {
+  background-color: teal;
+}
+.list {
+  text-align: center;
+  padding: 10px;
+  height: 30px;
+  width: 90%;
+  border-radius: 5px;
+}
+.list:hover {
+  background-color: rgb(56, 56, 245);
+  text-align: center;
+}
+.bcg {
+  grid-column: span 3;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), red),
+    url(./component//image/messg-backgroung.jpg) center;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.messg {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10vh;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: red;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+}
+.bcg-winner {
+  grid-column: span 3;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), green),
+    url(./component//image/messg-backgroung.jpg) center;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.winner {
+  background-color: rgba(166, 243, 104, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10vh;
+  border: 1px solid rgb(52, 247, 3);
+  border-radius: 5px;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: rgb(20, 70, 235);
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+}
+@media only screen and (max-width: 1024px) {
+  .title {
+    font-size: 2.5em;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+  }
+  .name {
+    position: absolute;
+    top: 30%;
+    width: 40%;
+  }
+  .play {
+    position: absolute;
+    top: 40%;
+    width: 25%;
+  }
+
+  .qHeader {
+    font-size: 1em;
+    font-family: fantasy;
+    word-break: break-all;
+    padding: 7px;
+  }
+  .option {
+    position: absolute;
+    top: 38%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2em;
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    word-wrap: break-word;
+  }
+  .name {
+    position: absolute;
+    top: 35%;
+    width: 50%;
+  }
+  .play {
+    position: absolute;
+    top: 45%;
+    width: 35%;
+  }
+  .qHeader {
+    font-size: 1em;
+    font-family: fantasy;
+    word-break: break-all;
+    padding: 7px;
+  }
+  .option {
+    position: absolute;
+    top: 38%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .title {
+    font-size: 1.5em;
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    word-wrap: break-word;
+  }
+  .name {
+    position: absolute;
+    top: 35%;
+    width: 60%;
+  }
+  .play {
+    position: absolute;
+    top: 45%;
+    width: 35%;
+  }
+  .messg {
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+  .replay {
+    position: absolute;
+    left: 30%;
+    bottom: 35%;
+    width: 40%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main {
+    grid-column: span 2;
+    position: relative;
+    height: 10vh;
+    background: #07053a;
+  }
+  .timer {
+    position: absolute;
+    left: 30%;
+    top: 0;
+  }
+  .question {
+    grid-column: span 2;
+    height: 90vh;
+  }
+  .qHeader {
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: fantasy;
+    word-break: break-all;
+  }
+  .option {
+    position: absolute;
+    top: 38%;
+  }
+  .ans {
+    font-size: 1em;
+    margin-left: 20px;
+    width: 90%;
+    color: blue;
+    margin-top: 5px;
+    word-break: break-all;
+  }
+  .sideMenu {
+    font-weight: 500;
+  }
+  .moneyList {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .user {
+    display: flex;
+    font-size: 1em;
+    position: relative;
+  }
+  .title {
+    font-size: 1.5em;
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    word-wrap: break-word;
+  }
+  .name {
+    position: absolute;
+    top: 35%;
+    width: 60%;
+  }
+  .play {
+    position: absolute;
+    top: 45%;
+    width: 35%;
+  }
+  .messg {
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+  .replay {
+    position: absolute;
+    left: 30%;
+    bottom: 35%;
+    width: 40%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main {
+    grid-column: span 2;
+    position: relative;
+    height: 10vh;
+    background: #07053a;
+  }
+  .timer {
+    position: absolute;
+    left: 30%;
+    top: 0;
+  }
+  .question {
+    grid-column: span 2;
+    height: 90vh;
+  }
+  .qHeader {
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: fantasy;
+    word-break: break-all;
+  }
+  .option {
+    position: absolute;
+    top: 38%;
+  }
+  .ans {
+    font-size: 1em;
+    margin-left: 20px;
+    width: 90%;
+    color: blue;
+    margin-top: 5px;
+    word-break: break-all;
+  }
+  .sideMenu {
+    font-weight: 500;
+  }
+  .moneyList {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .user {
+    display: flex;
+    font-size: 1em;
+    position: relative;
+  }
+  .title {
+    font-size: 1.5em;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    word-wrap: break-word;
+  }
+  .name {
+    position: absolute;
+    top: 25%;
+    width: 60%;
+  }
+  .play {
+    position: absolute;
+    top: 35%;
+    width: 35%;
+  }
+  .messg {
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+  .replay {
+    position: absolute;
+    left: 30%;
+    bottom: 35%;
+    width: 40%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main {
+    grid-column: span 2;
+    position: relative;
+    height: 10vh;
+    background: #07053a;
+  }
+  .timer {
+    position: absolute;
+    left: 30%;
+    top: 0;
+  }
+  .question {
+    grid-column: span 2;
+    height: 90vh;
+  }
+  .qHeader {
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: fantasy;
+    word-break: break-all;
+  }
+  .option {
+    position: absolute;
+    top: 38%;
+  }
+  .ans {
+    font-size: 1em;
+    margin-left: 20px;
+    width: 90%;
+    color: blue;
+    margin-top: 5px;
+    word-break: break-all;
+  }
+  .sideMenu {
+    font-weight: 500;
+  }
+  .moneyList {
+    padding: 5px;
+  }
+}
